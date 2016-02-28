@@ -1,0 +1,31 @@
+<html>
+   <head>
+      <title>JavaScript Array reduce Method</title>
+   </head>
+   
+   <body>
+   
+      <script type="text/javascript">
+        var orders = [
+		{amount:10},
+		{amount:20},
+		{amount:30},
+		{amount:40}
+		]
+		var total = 0;
+	   for(var i=0; i<orders.length; i++){
+	   total +=orders[i].amount;
+	   }
+	   console.log(total);
+	   
+	   //same work usig reduce 
+	   total = orders.reduce(function(sum, order){
+	   console.log("hello", sum, order);
+	   return sum + order.amount;
+	   }, 0)
+	   console.log(total);
+	   
+      </script>
+      
+   </body>
+</html>
