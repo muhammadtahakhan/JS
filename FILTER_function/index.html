@@ -1,0 +1,41 @@
+<html>
+   <head>
+      <title>JavaScript Array filter Method</title>
+   </head>
+   
+   <body>
+   
+      <script type="text/javascript">
+         
+          var animals = [
+		{name:'caro', type:'dog'},
+		{name:'jimmy', type:'fish'},
+		{name:'ursula', type:'cat'},
+		{name:'hamilton', type:'dog'},
+		{name:'nimo', type:'fish'}
+		];
+		// filtering using loop
+        var dogs = [];
+		for(var i=0; i < animals.length; i++){
+		if(animals[i].type=='dog'){
+		dogs.push(animals[i].name);
+		}
+		}
+		console.log(dogs);
+				
+				
+		//usimg filter function	
+       var dogs = animals.filter(function(animal){ return (animal.type=='dog') });	
+       console.log(dogs);
+	   
+	   
+	   //Here we also can seperate callback function
+	    var isDog = function(animal){ return (animal.type=='dog') }
+	    var dogs = animals.filter(isDog);	
+       console.log(dogs);
+	   
+	   
+      </script>
+      
+   </body>
+</html>
