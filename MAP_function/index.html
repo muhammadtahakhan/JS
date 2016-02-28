@@ -1,0 +1,36 @@
+<html>
+   <head>
+      <title>JavaScript Array map Method</title>
+   </head>
+   
+   <body>
+   
+      <script type="text/javascript">
+        var animals = [
+		{name:'caro', type:'dog'},
+		{name:'jimmy', type:'fish'},
+		{name:'ursula', type:'cat'},
+		{name:'hamilton', type:'dog'},
+		{name:'nimo', type:'fish'}
+		]
+         
+       var names = animals.map(function(animal){ return animal.name});
+		var types = animals.map(function(animal){ return animal.type});
+         
+         document.write( names );
+document.write("<br />")		 
+		document.write( types ); 
+		
+		// same thing we do by using for loop
+		var names=[];
+		for(var i=0; i < animals.length; i++){
+		//document.write(i);
+		names.push(animals[i].name);
+		}
+		 document.write("<br />");
+		  document.write("<br />")
+		 document.write(names);
+      </script>
+      
+   </body>
+</html>
